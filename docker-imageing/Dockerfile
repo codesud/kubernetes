@@ -5,10 +5,10 @@ RUN   rm -rf /usr/share/nginx/html/*
 # RUN   echo "Hello World" > /usr/share/nginx/html/index.html 
 COPY  index.html  /usr/share/nginx/html/index.html  
 EXPOSE 80 
-CMD   ["nginx", "-g", "daemon off;"]
+# CMD   ["nginx", "-g", "daemon off;"]
 ENV   COMPONENT=nginx 
 LABEL COMPONENT=${COMPONENT}  
-# ENTRYPOINT   ["nginx", "-g", "daemon off;"]
+ENTRYPOINT   ["nginx", "-g", "daemon off;"]
 
 
 ### Command    ----> New PID  
